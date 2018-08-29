@@ -1,0 +1,3 @@
+CREATE USER new04springboot WITH PASSWORD '123456';
+CREATE DATABASE new04springboot OWNER new04springboot ENCODING = 'UTF8';
+CREATE SCHEMA new04springboot;
