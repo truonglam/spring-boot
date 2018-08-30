@@ -37,7 +37,6 @@
             <version>${postgres.version}</version>
         </dependency>
 
-        <!--model mapper-->
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
