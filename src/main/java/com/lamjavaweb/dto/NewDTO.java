@@ -1,9 +1,12 @@
 package com.lamjavaweb.dto;
 
-public class NewDTO extends AbstractDTO {
+import java.io.Serializable;
 
-	private static final long serialVersionUID = 6637943928882396483L;
+public class NewDTO implements Serializable {
 
+	private static final long serialVersionUID = 3047062761785239087L;
+
+	private Long id;
 	private String title;
 	private String shortDescription;
 	private String content;
@@ -30,5 +33,9 @@ public class NewDTO extends AbstractDTO {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public Long getId() {
+		return id;
 	}
 }

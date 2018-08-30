@@ -1,14 +1,17 @@
 package com.lamjavaweb.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "new")
-public class NewEntity extends BaseEntity {
+public class NewEntity implements Serializable {
 
-    private static final long serialVersionUID = 5362004646431296772L;
+    private static final long serialVersionUID = -1156525449534782155L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column
     private String title;
@@ -41,5 +44,9 @@ public class NewEntity extends BaseEntity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
